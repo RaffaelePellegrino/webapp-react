@@ -21,9 +21,7 @@ function Card() {
         return <div>Caricamento...</div>;
     }
     return (
-        <div className="container text-center">
-            <h1 >Lista dei Film</h1>
-            <div className='row align-items-center justify-content-center g-3' >
+        <>
                 {movies.map((movie) => (
                     <div key={movie.id} className='col-3 p-3' style={{width: '18rem'}}>
                         <img src={`../public/${movie.id}.jpg`} style={{width: '100%', height: '350px'}} />
@@ -36,8 +34,7 @@ function Card() {
                         <NavLink className='btn btn-primary m-3' to={`/movies/${movie.id}`}>Dettagli e recensioni </NavLink>
                     </div>
                 ))}
-            </div>
-        </div>
+        </>
     );
 }
 
