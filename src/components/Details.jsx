@@ -28,14 +28,15 @@ function Details() {
     }
     return (
         <div className="container ">
-            <h1 className="text-center p-3">{movies.title}</h1>
             <div className="d-flex flex-column align-items-center p-3 gap-5">
-                <div className="">
-                     <img src={`../public/${movies.id}.jpg`} style={{height: '350px'}} />
+                <div className='card text-center' style={{width: '18rem'}}>
+                    <div className="card-img-top">
+                        <img src={`../public/${movies.id}.jpg`} style={{width:'100%', height: '350px'}} />
+                    </div>
+                    <h3 className="card-title">{movies.title}</h3> 
+                    <p className='card-text'>{movies.abstract}</p>
                 </div>
-                <div className="">
-                    <h3 className=''>Trama:</h3>
-                    <p>{movies.abstract}</p>
+                <div>
                     <h3 className="">Recensioni Utenti:</h3>
                     <div className="list-group">
                         {movies.reviews.length > 0 ? (
