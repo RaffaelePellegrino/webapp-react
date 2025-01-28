@@ -33,7 +33,7 @@ function Card() {
                             <h4>Trama:</h4>
                             <p>{movie.abstract}</p>
                         </div>
-                        <NavLink className='btn btn-primary m-3' to={`/${movie.id}`}>Dettagli e recensioni </NavLink>
+                        <NavLink className='btn btn-primary m-3' to={`/movies/${movie.id}`}>Dettagli e recensioni </NavLink>
                     </div>
                 ))}
             </div>

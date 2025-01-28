@@ -5,7 +5,8 @@ import Contact from "./pages/Contact";
 import Card from "./components/Card";
 import Home from "./pages/Home";
 import About from "./pages/about";
-// import bookDetail from "./pages/Details";
+import Details from "./components/Details";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +16,7 @@ function App() {
           <Route path='/about' Component={About}/>
           <Route path='/contact' Component={Contact}/>
           <Route path='/movies' Component={Card} />
-          {/* <Route path='/movies/:id' Component={MovieDetail} /> */}
+          <Route path='/movies/:id' Component={Details} />
         </Route>
       </Routes>
     </BrowserRouter>
